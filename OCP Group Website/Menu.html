@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-size: 28px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffa8;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:#ff4242;
+}
+.active {
+    background-color: #9bff9b;
+}
+</style>
+</head>
+<body>
+<ul>
+    <li><a href="F:\Profiles\Ethan\Desktop\OCP Group Website\Home.html">Home</a></li>
+    <li><a class="active" href="F:\Profiles\Ethan\Desktop\OCP Group Website\Menu.html">Menu</a></li>
+    <li><a href="F:\Profiles\Ethan\Desktop\OCP Group Website\Order.html">Order</a></li>
+    <li><a href="F:\Profiles\Ethan\Desktop\OCP Group Website\Partners.html">Partners</a></li>
+    <li><a href="F:\Profiles\Ethan\Desktop\OCP Group Website\About.html">About</a></li>
+    <li><a href="F:\Profiles\Ethan\Desktop\OCP Group Website\Contact.html">Contact</a></li>
+</ul>
+<p>(insert logo here)</p>
+
+<style>
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.menuContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+<body>
+
+<p>Click on a button to view our menu!</p>
+
+<div class="tab">
+  <button class="menuLink" onclick="openMenu(event, 'Omelettes')">Omelettes</button>
+  <button class="menuLink" onclick="openMenu(event, 'Smoothies')">Smoothies</button>
+  <button class="menuLink" onclick="openMenu(event, 'Muffins')">Muffins</button>
+  <button class="menuLink" onclick="openMenu(event, 'Coffee')">Coffee</buttone>
+</div>
+
+<div id="Omelettes" class="menuContent">
+  <h3>Omelettes</h3>
+  <p>The main focus of Egghead Omelette Bar is our Omelettes! We have a wide selection of fillings for our
+      omelettes. <br>Our Veggies include: Red and Green Bell Peppers, Onions, Mushrooms, Jalapeños, and spinach. <br>
+      We also have a small selection of meats available to use: bacon, ham, and sausage!
+  </p>
+</div>
+
+<div id="Smoothies" class="menuContent">
+  <h3>Smoothies</h3>
+  <p>Smoothies. Who doesn't love them!? Here at Egghead Omelette Bar, we have six different types of smoothies!
+     <br> Type 1 <br>
+      Type 2 <br>
+      Type 3 <br>
+      Type 4 <br>
+      Type 5 <br>
+      Type 6 <br>
+      </p> 
+</div>
+
+<div id="Muffins" class="menuContent">
+  <h3>Muffins</h3>
+  <p>Here at Egghead Omelette Bar, we pride ourselves in our baking. Our favorite item to bake here <br>
+     would be our muffins! We have 3 or 4? muffins that are prepared on a daily basis, as well as a rotation <br>
+     of daily specials! <br>
+     Type 1 <br>
+     Type 2 <br>
+     Type 3 <br>
+     Type 4? <br> 
+  </p>
+</div>
+
+<div id="Coffee" class="menuContent">
+    <h3>Coffee</h3>
+    <p> Coffee. Whether you like it bitter or sweet, we have what you want. If you choose to dine in-house <br>
+        we have a self-served coffee bar to fulfill your caffeine needs. If you order take-out, you can <br>
+        let our workers know how you like it, and they will fix it right up for you! We will have (add coffee types)</p>
+    </p>
+</div>
+
+<script>
+function openMenu(evt, foodName) {
+    var i, menuContent, menuLink;
+    menuContent = document.getElementsByClassName("menuContent");
+    for (i = 0; i < menuContent.length; i++) {
+        menuContent[i].style.display = "none";
+    }
+    menuLink = document.getElementsByClassName("menuLink");
+    for (i = 0; i < menuLink.length; i++) {
+        menuLink[i].className = menuLink[i].className.replace(" active", "");
+    }
+    document.getElementById(foodName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html> 
